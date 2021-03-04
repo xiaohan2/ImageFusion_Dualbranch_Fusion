@@ -12,7 +12,8 @@ _tensor = transforms.ToTensor()
 _pil_gray = transforms.ToPILImage()
 device = 'cuda'
 model = DenseFuseNet().to(device)
-checkpoint = torch.load('./train_result/H_best.pkl')
+# checkpoint = torch.load('./train_result/H_best.pkl')
+checkpoint = torch.load('./weights/best.pkl')
 # checkpoint = torch.load('./train_result/model_weight_new.pkl')
 model.load_state_dict(checkpoint['weight'])
 
