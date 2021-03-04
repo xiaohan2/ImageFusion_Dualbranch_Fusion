@@ -10,7 +10,6 @@ from channel_fusion import channel_f as channel_fusion
 from utils import mkdir,Strategy
 _tensor = transforms.ToTensor()
 _pil_gray = transforms.ToPILImage()
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 device = 'cuda'
 model = DenseFuseNet().to(device)
 checkpoint = torch.load('./train_result/H_best.pkl')
